@@ -1,0 +1,18 @@
+<html>
+    <head>
+    <title> Input for javascrip</title>
+    <script>
+        function submit(){
+            let name=document.getElementById("name").value;
+            console.log('name:',name)
+            document.getElementById("result").innerText=name;
+        }
+    </script>
+    </head>
+    <body>
+        <label>name</label>
+        <input id="name" type="text"/>
+        <button onclick="submit()">submit</button>
+        <div id="result"></div>
+    </body>
+</html>
