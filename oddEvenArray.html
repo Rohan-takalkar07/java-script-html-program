@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>odd even using array</title>
+    </head>
+    <script>
+        function submit(){
+            let nums=document.getElementById("oe").value
+            let array=nums.split(",");
+            let even=[];
+            let odd=[];
+            
+             for(let i=0;i<=array.length;i++){
+             if(array[i]%2==0){
+                even.push(array[i]);
+                console.log(even);
+                
+            }   
+            else
+            {
+                odd.push(array[i]);
+                console.log(odd);
+            }
+        }
+        document.getElementById("result").innerText="even no:"+even;
+        document.getElementById("resultodd").innerText="odd no:"+odd;
+        
+
+        }
+    </script>
+    <body>
+        <label>enter number</label>
+        <input id="oe" type="text" />
+        <button onclick="submit()">submit</button>
+        <div id="result"></div>
+        <div id="resultodd"></div>
+
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>splite positive negative</title>
+</head>
+<script>
+    function submit() {
+        let num = document.getElementById("rohan").value;
+        let array = num.split(",");
+        let positive = [];
+        let negative = [];
+        let notvalid = [];
+        for (i = 0; i <= array.length; i++) {
+            if (array[i] == 0){
+                notvalid.push(array[i]);
+                console.log("not valid")
+            }
+               
+            else if (array[i] >= 0) {
+                positive.push(array[i]);
+                console.log(positive)
+            }
+            else{
+                negative.push(array[i]);
+                console.log(negative)
+            }
+        }
+        document.getElementById("result").innerText = "positive number:" + positive;
+        document.getElementById("resultnegative").innerText = "negative numbers:" + negative;
+        document.getElementById("resulty").innerText = "not defined "+notvalid;
+    }
+</script>
+
+<body>
+    <label>enter the numbers</label>
+    <input id="rohan" type="text" />
+    <button onclick="submit()">submit</button>
+    <div id="result"></div>
+    <div id="resultnegative"></div>
+    <div id="resulty"></div>
+</body>
+
+</html>

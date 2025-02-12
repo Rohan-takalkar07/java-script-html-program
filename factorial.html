@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>factoriyal program</title>
+    </head>
+    <script>
+        
+        function submit(){
+         let num=document.getElementById("fact").value;
+        //  console.log(fact)
+         if(num<0){
+         console.log("nat valid number enter another one")
+         }
+         else
+         {
+         fact=1;
+          for(i=1;i<=num;i++){
+          fact=fact*i;
+          }
+          document.getElementById("result").innerText ="factoriyal is:"+fact;
+        }
+    }
+
+    </script>
+    <body>
+        <label>Enter number</label>
+        <input id="fact" type="text" />
+        <button onclick="submit()">submit</button>
+        <div id="result"></div>
+    </body>
+</html>

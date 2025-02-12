@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>odd even</title>
+    </head>
+    <script>
+        function submit(){
+            let num =document.getElementById("num").value;
+            if(num<0){
+                document.getElementById("result").innerText="not valid";
+            }
+            else{
+            if(num%2==0){
+                document.getElementById("result").innerText="the given number is even";
+            }
+            else{
+                document.getElementById("result").innerText="the given number is odd";
+             }}
+        }
+    </script>
+    <body>
+        <label>enter number</label>
+        <input id="num" type="text" />
+        <button onclick="submit()">submit</button>
+        <div id="result"></div>
+    </body>
+    </html>
